@@ -1,0 +1,16 @@
+The use of enum was both required and made the code more readable.
+
+To make the gaant chart look good. The months were centered based on a defined width and the strlen of each month, like the example and the task name was aligned to the left as it was in the example.
+
+For the struct task the num_dependencies was used so the dependencies array could be easily looped over without checking the length of the dependencies[array].
+
+We made a function called print_gaant_chart that could take in the number of tasks that the user requested and a struct. 
+This function would then format the information in a table, by referring to enums in the for loop implemented it was not only readable but was also effective as serving as an index for the loop. 
+strlen was also used which allowed us to adapt the code to have a consistent table regardless of the length of the name of the given month. 
+A separate function was used to print the underscores for each row. 
+There is a for loop that increments for each month to print each box and depending on the contents in the struct the output will be an empty box of one containing 'XXX', This will repeat until each box is complete this function also aids in mapping the task to the struct. 
+You are able to edit the tasks due to the strcmp operator that will compare the task the user wishes to edit with the tasks in the sruct until it locates the id of the task. 
+The user is then prompted to re enter the data with the changes they desire and the struct is updated accordingly. 
+
+The Ascii art is a diamond. 
+The circular dependency is by recursively calling a function to print the task being checked and then its dependencies and adding them to an array called visitedTask. If a task has already been visited then a check if circular function is called which in turn calls itself recursively to compare against all dependentIds of some target target Id.
