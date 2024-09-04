@@ -12,5 +12,4 @@ There is a for loop that increments for each month to print each box and dependi
 You are able to edit the tasks due to the strcmp operator that will compare the task the user wishes to edit with the tasks in the sruct until it locates the id of the task. 
 The user is then prompted to re enter the data with the changes they desire and the struct is updated accordingly. 
 
-The Ascii art is a diamond. 
 The circular dependency is by recursively calling a function to print the task being checked and then its dependencies and adding them to an array called visitedTask. If a task has already been visited then a check if circular function is called which in turn calls itself recursively to compare against all dependentIds of some target target Id.
